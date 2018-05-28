@@ -10,10 +10,4 @@ describe('load', () => {
     expect(process.env.testSetting).to.be.equal('Set');
     process.env = oldEnv;
   });
-  it('gives no errors when loading no config files.', () => {
-    const oldEnv = Object.assign({}, process.env);
-    load();
-    expect(process.env).to.be.an('Object');
-    process.env = oldEnv;
-  });
 });
