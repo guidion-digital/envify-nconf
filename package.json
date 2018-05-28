@@ -2,7 +2,6 @@
   "name": "@gdn/envify-nconf",
   "version": "0.0.0-semantically-released",
   "description": "",
-  "private": true,
   "main": "dist/index",
   "types": "./dist/index.d.ts",
   "scripts": {
