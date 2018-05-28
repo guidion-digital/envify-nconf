@@ -1,3 +1,3 @@
-import Default from './default';
+import { load } from './env';
 
-export {Default};
+export { load };
