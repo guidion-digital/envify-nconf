@@ -2,14 +2,13 @@
   "name": "@gdn/envify-nconf",
   "version": "0.0.0-semantically-released",
   "description": "",
-  "private": true,
   "main": "dist/index",
   "types": "./dist/index.d.ts",
   "scripts": {
     "test": "gulp test",
     "semantic-release": "semantic-release"
   },
-  "author": "",
+  "author": "Guidion",
   "license": "MIT",
   "dependencies": {
     "@types/mocha": "^5.2.0",
@@ -35,6 +34,9 @@
     "tslint": "^5.10.0",
     "typescript": "^2.8.3",
     "typings": "^2.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",
