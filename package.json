@@ -5,7 +5,7 @@
   "main": "dist/index",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "gulp build && nyc --reporter=html --reporter=text mocha dist/test",
+    "test": "gulp build && nyc --reporter=text --reporter=html mocha  './{,!(node_modules)/**}/*.test.js'",
     "semantic-release": "semantic-release"
   },
   "author": "Guidion",
