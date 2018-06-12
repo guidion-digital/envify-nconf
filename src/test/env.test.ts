@@ -1,8 +1,7 @@
-import * as Chai from 'chai';
+import { expect } from 'chai';
 import { load } from '../env';
-import * as path from 'path';
+import { resolve } from 'path';
 
-const expect = Chai.expect;
 const oldEnv = Object.assign({}, process.env);
 describe('load', () => {
   afterEach(() => {
@@ -10,12 +9,12 @@ describe('load', () => {
   });
 
   it('loads the default js.', () => {
-    load(path.resolve(__dirname, 'mock/'));
+    load(resolve(__dirname, 'mock/'));
     expect(process.env.testSetting).to.be.equal('Set');
   });
 
   it('loads the default js and a branch js and branch config file overrules default setting.', () => {
-    load(path.resolve(__dirname, 'mock/'), 'testbranch');
+    load(resolve(__dirname, 'mock/'), 'testbranch');
     expect(process.env.testSetting).to.be.equal('test branch yo');
   });
 

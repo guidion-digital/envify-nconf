@@ -1,3 +1,1 @@
-import { load } from './env';
-
-export { load };
+export { load } from './env';
