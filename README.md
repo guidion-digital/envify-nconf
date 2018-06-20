@@ -10,6 +10,14 @@ npm install --save @gdn/envify-nconf
 
 You can make use of this library by calling is as soon as possible in your project.
 Example:
+```js
+import { load } from '@gdn/envify-nconf';
+// Load config settings
+load(__dirname + '/../config/');
+...
+
+```
+OR
 
 ```js
 require('@gdn/envify-nconf').load(__dirname + '/config/');
