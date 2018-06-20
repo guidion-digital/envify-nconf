@@ -1,7 +1,10 @@
 import * as path from 'path';
 import * as nconf from 'nconf';
 
-function load(configFolder: string, branch = process.env.TRAVIS_PULL_REQUEST_BRANCH || process.env.TRAVIS_BRANCH) {
+function load(
+  configFolder: string = `${process.cwd()}/config`,
+  branch: string = process.env.TRAVIS_PULL_REQUEST_BRANCH || process.env.TRAVIS_BRANCH
+) {
 
   process.env = nconf.argv()
     .env()
