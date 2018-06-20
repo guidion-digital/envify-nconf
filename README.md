@@ -13,20 +13,20 @@ Example:
 ```js
 import { load } from '@gdn/envify-nconf';
 // Load config settings
-load(__dirname + '/../config/');
+load();
 ...
 
 ```
 OR
 
 ```js
-require('@gdn/envify-nconf').load(__dirname + '/config/');
+require('@gdn/envify-nconf').load();
 ...
 
 ```
 
 The .load function has 2 parameters:
-1. configFolder: string
+1. configFolder: string | Default: process.cwd() + /config
 2. branch: string | Optional | default: process.env.TRAVIS_BRANCH if set
 
 
