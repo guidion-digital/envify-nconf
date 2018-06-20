@@ -11,7 +11,4 @@ gulp.task('lint', ['clean'], require(GLOBAL.dirs.gulp + 'lint')(GLOBAL, gulp));
 gulp.task('build', (cb) => runSequence('lint', 'build:compile', 'build:copy', cb));
 gulp.task('build:compile', require(GLOBAL.dirs.gulp + 'build')(GLOBAL, gulp));
 gulp.task('build:copy', require(GLOBAL.dirs.gulp + 'copy')(GLOBAL, gulp));
-gulp.task('test:instrument', ['build'], require(GLOBAL.dirs.gulp + 'test/instrument')(GLOBAL, gulp));
-gulp.task('test:cover', ['test:instrument'], require(GLOBAL.dirs.gulp + 'test/cover')(GLOBAL, gulp));
-gulp.task('test', ['test:cover']);
-gulp.task('default', ['test']);
+gulp.task('default');
