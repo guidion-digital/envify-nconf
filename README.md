@@ -27,7 +27,7 @@ require('@gdn/envify-nconf').load();
 
 The .load function has 2 parameters:
 1. configFolder: string | Default: process.cwd() + /config
-2. branch: string | Optional | default: process.env.TRAVIS_BRANCH if set
+2. branch: string | Optional | default: checks env vars for Travis and CircleCI branches
 
 
 ## Hierarchy and settings
