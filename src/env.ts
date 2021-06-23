@@ -1,5 +1,5 @@
-import {join} from 'path';
-import {argv} from 'nconf';
+import { join } from 'path';
+import { argv } from 'nconf';
 
 export const load = (
   configFolder: string = `${process.cwd()}/config`,
@@ -9,8 +9,8 @@ export const load = (
   const _branch = branch || process.env[supportedEnvVariables[0]];
   process.env = argv()
     .env()
-    .file('local', {file: join(configFolder, `/local.json`)})
-    .file('branch', {file: join(configFolder, `/${_branch}.json`)})
-    .file('defaults', {file: join(configFolder, '/default.json')})
+    .file('local', { file: join(configFolder, `/local.json`) })
+    .file('branch', { file: join(configFolder, `/${_branch}.json`) })
+    .file('defaults', { file: join(configFolder, '/default.json') })
     .get();
 };
