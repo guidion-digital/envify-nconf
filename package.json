@@ -9,8 +9,7 @@
     "tslint": "tslint \"src/**.ts\"",
     "copy": "npx copyfiles -u 1 src/test/mock/*.json dist/",
     "test": "npm run build && nyc --reporter=text --reporter=html mocha ./dist/**/**.test.js",
-    "semantic-release": "semantic-release",
-    "prepare": "node dist/init"
+    "semantic-release": "semantic-release"
   },
   "author": "Guidion",
   "license": "MIT",
