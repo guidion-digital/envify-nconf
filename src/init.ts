@@ -1,7 +1,7 @@
 import { appendFileSync, existsSync, mkdirSync } from 'fs';
 
 const configFolder: string = `${process.cwd()}/config`;
-const indexJSFile: string = `${process.cwd()}/config/index.js`;
+const indexJSFile: string = `${process.cwd()}/config/export.js`;
 const defaultJSONFile: string = `${process.cwd()}/config/default.json`;
 const localJSONFile: string = `${process.cwd()}/config/local.json`;
 
