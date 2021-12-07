@@ -1,3 +1,3 @@
-require('./index.js').load();
+require('./index').load();
 
 module.exports = () => process.env;
