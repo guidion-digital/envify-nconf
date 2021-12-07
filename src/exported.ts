@@ -1,3 +1,3 @@
-require('@gdn/envify-nconf').load();
+require('./index.js').load();
 
 module.exports = () => process.env;
