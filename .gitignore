@@ -3,8 +3,12 @@ dist/
 typings/
 coverage/
 .env
+.npmrc
 npm-debug.log
 .vscode/
 .idea/
 docs/
 .nyc_output/
+
+# Act / GH actions secrets
+.secrets

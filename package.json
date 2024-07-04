@@ -34,6 +34,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GuidionDev/envify-nconf.git"
+    "url": "git+https://github.com/guidion-digital/envify-nconf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/guidion-digital/envify-nconf/issues"
+  },
+  "homepage": "https://github.com/guidion-digital/envify-nconf#readme",
+  "release": {
+    "branches": ["prod"]
   }
 }
