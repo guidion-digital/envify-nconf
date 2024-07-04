@@ -41,10 +41,8 @@ jobs:
       - name: Test
         run: npm run test
       - name: Semantic release
-        if: github.ref == 'refs/heads/prod' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/prod'
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
-          npm run semantic-release
+        run: npm run semantic-release
