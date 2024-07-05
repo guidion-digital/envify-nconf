@@ -8,14 +8,14 @@ on:
 jobs:
   test_and_build:
     name: Test and Build
-    uses: guidion-digital/.github/workflow-templates/partial-test-build.yaml@GDD-5502
+    uses: guidion-digital/.github/.github/workflows/partial-test-build.yaml@GDD-5502
     secrets: inherit
     with:
       concurrency_name: "${{github.ref}}"
       disable_linting: true
   build_and_release:
     name: Test, build and release
-    uses: guidion-digital/.github/workflow-templates/semantic-release.yaml@GDD-5502
+    uses: guidion-digital/.github/.github/workflows/semantic-release.yaml@GDD-5502
     needs: test_and_build
     secrets: inherit
     permissions:
