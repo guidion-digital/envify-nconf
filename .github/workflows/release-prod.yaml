@@ -1,4 +1,4 @@
-# name: Run tests, build and releases on push to prod
+name: Run tests, build and releases on push to prod
 
 on:
   push:
