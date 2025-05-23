@@ -5,7 +5,8 @@
   "main": "dist/index",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "npm run tslint && npx rimraf dist && npx tsc && npm run copy",
+    "build": "npm run tslint && npx rimraf dist && npm run tsc && npm run copy",
+    "tsc": "tsc",
     "tslint": "tslint \"src/**.ts\"",
     "copy": "npx copyfiles -u 1 src/test/mock/*.json dist/",
     "test": "npm run build && nyc --reporter=text --reporter=html mocha ./dist --recursive",
