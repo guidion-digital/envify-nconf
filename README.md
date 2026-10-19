@@ -1,3 +1,43 @@
+# @gdn/envify-nconf
+
+**Deprecated.** This library is no longer maintained. Support has been discontinued.
+
+Read environment variables with Node.js. No extra package is required.
+
+## Reading environment variables
+
+Environment variables are available on `process.env`. Every value is a string.
+
+```js
+const port = process.env.PORT;
+const nodeEnv = process.env.NODE_ENV;
+```
+
+A variable that is not set is `undefined`:
+
+```js
+const apiUrl = process.env.API_URL;
+
+if (!apiUrl) {
+  throw new Error('API_URL is not set');
+}
+```
+
+Set them when you start the process:
+
+```bash
+PORT=3000 NODE_ENV=production node app.js
+```
+
+Or export them in the shell first:
+
+```bash
+export PORT=3000
+node app.js
+```
+
+---
+
 # Envify nconf
 A ready to use loading to the process.env for nconf.
 
@@ -37,6 +77,4 @@ The following settings will be loaded in the following hierarchy:
 3. local.json
 4. {branch}.json
 5. default.json
-
-
 
