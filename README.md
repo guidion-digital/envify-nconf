@@ -2,7 +2,7 @@
 
 **Deprecated.** This library is no longer maintained. Support has been discontinued.
 
-Read environment variables with Node.js. No extra package is required.
+Read environment variables with Node.js. No extra package is required. See [How to read environment variables from Node.js](https://nodejs.org/learn/command-line/how-to-read-environment-variables-from-nodejs).
 
 ## Reading environment variables
 
