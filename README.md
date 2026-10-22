@@ -2,9 +2,37 @@
 
 **Deprecated.** This library is no longer maintained. Support has been discontinued.
 
+## How to migrate to the regular way
+
 Read environment variables with Node.js. No extra package is required. See [How to read environment variables from Node.js](https://nodejs.org/learn/command-line/how-to-read-environment-variables-from-nodejs).
 
-## Reading environment variables
+If a `.env` file is always present, pass it on the command line:
+
+```bash
+node --env-file=.env app.js
+```
+
+To run locally with a `.env` file and on GitHub Actions, where GitHub sets the variables and no `.env` file is present, load the file only when it exists. `process.loadEnvFile()` throws if the file is missing.
+
+```js
+import { existsSync } from 'node:fs';
+import { loadEnvFile } from 'node:process';
+
+if (existsSync('.env')) {
+  loadEnvFile();
+}
+```
+
+```js
+const { existsSync } = require('node:fs');
+const { loadEnvFile } = require('node:process');
+
+if (existsSync('.env')) {
+  loadEnvFile();
+}
+```
+
+On GitHub Actions the variables are already on `process.env`, so a missing file is skipped and those values are used.
 
 Environment variables are available on `process.env`. Every value is a string.
 
